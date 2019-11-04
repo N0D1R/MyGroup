@@ -9,9 +9,10 @@ public class Student {
     private String bio;
     private String hobbies;
     private String birthday;
+    private String email;
+    private String gender;
     private String dady;
     private String mummy;
-    private String gender;
 
 
     public Student(String fullname, String phone, String address) {
@@ -98,6 +99,14 @@ public class Student {
 
     public void setMummy(String mummy) {
         this.mummy = mummy;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getGender() {
