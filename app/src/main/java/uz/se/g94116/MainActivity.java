@@ -22,6 +22,5 @@ public class MainActivity extends AppCompatActivity {
         StudentAdapter adapter = new StudentAdapter(getApplicationContext(), StudentUtils.loadStudents());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
-
     }
 }

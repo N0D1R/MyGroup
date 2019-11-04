@@ -1,11 +1,13 @@
 package uz.se.g94116.model;
 
+import android.graphics.drawable.Drawable;
+
 public class Student {
     private int id;
     private String fullname;
     private String phone;
     private String address;
-    private int avatar;
+    private Drawable avatar;
     private String bio;
     private String hobbies;
     private String birthday;
@@ -15,7 +17,8 @@ public class Student {
     private String mummy;
 
 
-    public Student(String fullname, String phone, String address) {
+    public Student(Drawable avatar, String fullname, String phone, String address) {
+        this.avatar = avatar;
         this.fullname = fullname;
         this.phone = phone;
         this.address = address;
@@ -45,11 +48,11 @@ public class Student {
         this.address = address;
     }
 
-    public int getAvatar() {
+    public Drawable getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(int avatar) {
+    public void setAvatar(Drawable avatar) {
         this.avatar = avatar;
     }
 

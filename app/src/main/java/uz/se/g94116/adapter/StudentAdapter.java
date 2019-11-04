@@ -1,6 +1,7 @@
 package uz.se.g94116.adapter;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.amulyakhare.textdrawable.TextDrawable;
 
 import java.util.List;
 
@@ -33,7 +36,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.MyViewHo
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder viewHolder, int position) {
-
+        viewHolder.avatar.setImageDrawable(students.get(position).getAvatar());
         viewHolder.fullname.setText(students.get(position).getFullname());
         viewHolder.phone.setText(students.get(position).getPhone());
         viewHolder.address.setText(students.get(position).getAddress());
