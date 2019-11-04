@@ -9,6 +9,8 @@ public class Student {
     private String bio;
     private String hobbies;
     private String birthday;
+    private String email;
+    private String gender;
 
 
     public Student(String fullname, String phone, String address) {
@@ -79,5 +81,21 @@ public class Student {
 
     public void setBirthday(String birthday) {
         this.birthday = birthday;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
