@@ -1,10 +1,15 @@
 package uz.se.g94116.model;
 
 public class Student {
+    private int id;
     private String fullname;
     private String phone;
     private String address;
     private int avatar;
+    private String bio;
+    private String hobbies;
+    private String birthday;
+
 
     public Student(String fullname, String phone, String address) {
         this.fullname = fullname;
@@ -42,5 +47,37 @@ public class Student {
 
     public void setAvatar(int avatar) {
         this.avatar = avatar;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getBio() {
+        return bio;
+    }
+
+    public void setBio(String bio) {
+        this.bio = bio;
+    }
+
+    public String getHobbies() {
+        return hobbies;
+    }
+
+    public void setHobbies(String hobbies) {
+        this.hobbies = hobbies;
+    }
+
+    public String getBirthday() {
+        return birthday;
+    }
+
+    public void setBirthday(String birthday) {
+        this.birthday = birthday;
     }
 }
