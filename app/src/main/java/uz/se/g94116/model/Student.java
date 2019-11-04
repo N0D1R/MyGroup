@@ -9,6 +9,9 @@ public class Student {
     private String bio;
     private String hobbies;
     private String birthday;
+    private String dady;
+    private String mummy;
+    private String gender;
 
 
     public Student(String fullname, String phone, String address) {
@@ -79,5 +82,29 @@ public class Student {
 
     public void setBirthday(String birthday) {
         this.birthday = birthday;
+    }
+
+    public String getDady() {
+        return dady;
+    }
+
+    public void setDady(String dady) {
+        this.dady = dady;
+    }
+
+    public String getMummy() {
+        return mummy;
+    }
+
+    public void setMummy(String mummy) {
+        this.mummy = mummy;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 }
