@@ -5,6 +5,7 @@ import android.graphics.drawable.AdaptiveIconDrawable;
 import android.graphics.drawable.Drawable;
 
 import com.amulyakhare.textdrawable.TextDrawable;
+import com.amulyakhare.textdrawable.util.ColorGenerator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -92,6 +93,7 @@ public class StudentUtils {
         list.add(izzat);
 
         for (int i = 0; i < list.size(); i++) {
+            ColorGenerator colorGenerator = ColorGenerator.MATERIAL;
             String name = list.get(i).getFullname();
             String txt = name.charAt(0) + String.valueOf(name.charAt(name.lastIndexOf(' ') + 1));
             TextDrawable dList = TextDrawable.builder()
@@ -99,7 +101,7 @@ public class StudentUtils {
                     .width(160)  // width in px
                     .height(160) // height in px
                     .endConfig()
-                    .buildRect(txt, Color.BLUE);
+                    .buildRect(txt, colorGenerator.getRandomColor());
             Student student = new Student(dList, list.get(i).getFullname(),list.get(i).getPhone(), list.get(i).getAddress());
             list.set(i,student);
         }
