@@ -2,6 +2,8 @@ package uz.se.g94116.model;
 
 import android.graphics.drawable.Drawable;
 
+import com.google.android.gms.maps.model.LatLng;
+
 public class Student {
     private int id;
     private String fullname;
@@ -15,6 +17,8 @@ public class Student {
     private String gender;
     private String dady;
     private String mummy;
+
+    private LatLng latLng;
 
 
     public Student(Drawable avatar, String fullname, String phone, String address) {
@@ -118,5 +122,13 @@ public class Student {
 
     public void setGender(String gender) {
         this.gender = gender;
+    }
+
+    public LatLng getLatLng() {
+        return latLng;
+    }
+
+    public void setLatLng(LatLng latLng) {
+        this.latLng = latLng;
     }
 }
