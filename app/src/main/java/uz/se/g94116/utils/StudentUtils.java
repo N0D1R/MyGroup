@@ -6,6 +6,7 @@ import android.graphics.drawable.Drawable;
 
 import com.amulyakhare.textdrawable.TextDrawable;
 import com.amulyakhare.textdrawable.util.ColorGenerator;
+import com.google.android.gms.maps.model.LatLng;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -25,9 +26,13 @@ public class StudentUtils {
                 .buildRect("BQ", Color.BLUE);
 
         Student bekzod = new Student(dShablon,"Bekzod Quranboyev", "+998973001548", "Xonqa, Olaja, 56-uy");
+        bekzod.setLatLng(new LatLng(40.806879, -7.898226));
         Student furqat = new Student(dShablon,"Furqat Aminov", "+998973116587", "Beruniy shahar, 89");
+        furqat.setLatLng(new LatLng(39.024163, -8.864772));
         Student akbar = new Student(dShablon,"Akbar Otaboyev", "+998973002266", "Yangiariq, Ostona, 35");
+        akbar.setLatLng(new LatLng(52.880181, 29.200476));
         Student doniyor = new Student(dShablon,"Doniyor Abdullayev", "+998999692421", "Bog'ot, , 35");
+        doniyor.setLatLng(new LatLng(38.876780, 35.181391));
         Student shaxriyor = new Student(dShablon,"Shaxriyor Abdurazzaqov", "+998973002266", "Qo'shko'pir , Ostona, 35");
         Student siroj = new Student(dShablon,"Siroj Allaberganov", "+998973002266", "Xiva, Go'ja, 35");
         Student alo = new Student(dShablon,"A'lo Ataxonova", "+998973002266", "Yangiariq, Ostona, 35");
@@ -102,11 +107,9 @@ public class StudentUtils {
                     .height(160) // height in px
                     .endConfig()
                     .buildRect(txt, colorGenerator.getRandomColor());
-            Student student = new Student(dList, list.get(i).getFullname(),list.get(i).getPhone(), list.get(i).getAddress());
-            list.set(i,student);
+            list.get(i).setAvatar(dList);
         }
 
         return list;
     }
-
 }
