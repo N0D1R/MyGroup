@@ -102,7 +102,9 @@ public class Main2Activity extends AppCompatActivity
             Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
 
-        } else if (id == R.id.nav_tools) {
+        } else if (id == R.id.nav_location) {
+            Intent intent = new Intent(this,MapsActivity.class);
+            startActivity(intent);
 
         } else if (id == R.id.nav_share) {
 
